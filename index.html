@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Jual Tiket Wisata - Beranda</title>
+  <style>
+@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans+SC:ital,wght@0,100..900;1,100..900&family=Pacifico&family=Zilla+Slab:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+.judul{
+  color: #45343c;
+  font-family: 'Alumni+Sans+SC';
+}
+.isi{
+  color: #262423;
+  font-family: 'Pacifico';
+}
+ul,li{
+  color: rgb(45, 2, 2);
+  font-family: 'Zilla+Slab';
+}
+</style>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="index.html">Beranda</a>
+      <a href="destinasi.html">Destinasi</a>
+      <a href="pemesanan.html">Pemesanan</a>
+      <a href="kontak.html">Kontak</a>
+    </nav>
+  </header>
+
+  <section class="banner">
+    <h1 class="judul">Wisata Indonesia</h1>
+  </section>
+
+  <section class="container">
+    <h2 class="isi">Destinasi Populer</h2>
+    <div class="destinasi-grid">
+
+      <!-- 1. Bali --> 
+      <div class="card">
+        <img src="https://images.pexels.com/photos/2659475/pexels-photo-2659475.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Bali" />
+        <div class="card-body">
+          <h3 class="isi">Bali</h3>
+          <p>Surga tropis dengan pantai indah dan budaya kaya.</p>
+          <p><strong>Harga: Rp 250.000</strong></p>
+        </div>
+      </div>
+
+      <!-- 2. Bandung -->
+      <div class="card">
+        <img src="https://images.pexels.com/photos/32384869/pexels-photo-32384869/free-photo-of-arsitektur-masjid-megah-di-bandung-jawa-barat.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Bandung" />
+        <div class="card-body">
+          <h3 class="isi">Bandung</h3>
+          <p>Kota sejuk dengan wisata alam dan kuliner khas.</p>
+          <p><strong>Harga: Rp 200.000</strong></p>
+        </div>
+      </div>
+
+      <!-- 3. Yogyakarta -->
+      <div class="card">
+        <img src="https://images.pexels.com/photos/28518047/pexels-photo-28518047.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Yogyakarta" />
+        <div class="card-body">
+          <h3 class="isi">Yogyakarta</h3>
+          <p>Kota budaya dan sejarah dengan candi-candi megah.</p>
+          <p><strong>Harga: Rp 220.000</strong></p>
+        </div>
+      </div>
+
+       <!-- 4. Sulawesi Selatan -->
+      <div class="card">
+        <img src="https://images.pexels.com/photos/261204/pexels-photo-261204.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Sulawesi Selatan" />
+        <div class="card-body">
+          <h3 class="isi">Sulawesi Selatan</h3>
+          <p>Taman nasional dan budaya khas Toraja yang menarik.</p>
+          <p><strong>Harga: Rp 270.000</strong></p>
+        </div>
+      </div>
+
+      <!-- 5. Lombok NTB -->
+      <div class="card">
+        <img src="https://images.pexels.com/photos/31338733/pexels-photo-31338733.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Lombok NTB" />
+        <div class="card-body">
+          <h3 class="isi">Lombok NTB</h3>
+          <p>Destinasi Mandalika dengan pemandangan hijau.</p>
+          <p><strong>Harga: Rp 280.000</strong></p>
+
+    </div>
+  </section>
+
+  <div id="imageModal" class="modal">
+    <span class="modal-close" id="modalClose">&times;</span>
+    <img class="modal-content" id="modalImage" />
+  </div>
+
+  <footer>&copy; 2025 Jual Tiket Wisata. Semua hak cipta dilindungi.</footer>
+
+  <script>
+    const modal = document.getElementById("imageModal");
+    const modalImg = document.getElementById("modalImage");
+    const closeBtn = document.getElementById("modalClose");
+
+    document.querySelectorAll("img").forEach((img) => {
+      img.addEventListener("click", () => {
+        modal.style.display = "block";
+        modalImg.src = img.src;
+      });
+    });
+
+    closeBtn.onclick = () => modal.style.display = "none";
+    window.onclick = (e) => {
+      if (e.target === modal) modal.style.display = "none";
+    };
+  </script>
+</body>
+</html>

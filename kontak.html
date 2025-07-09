@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kontak Kami</title>
+  <style>
+      @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap");
+    </style>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="index.html">Beranda</a>
+      <a href="destinasi.html">Destinasi</a>
+      <a href="pemesanan.html">Pemesanan</a>
+      <a href="kontak.html">Kontak</a>
+    </nav>
+  </header>
+
+  <section class="container">
+    <h2 class="isi">Hubungi Kami</h2>
+    <p>
+      Jika Anda memiliki pertanyaan atau ingin informasi lebih lanjut, silakan hubungi kami melalui:
+    </p>
+    <ul>
+      <li>Email: info@tiketwisata.com</li>
+      <li>Telepon: +62 812 3456 7890</li>
+      <li>Alamat: Jl. Wisata No.123, Jakarta, Indonesia</li>
+    </ul>
+
+    <h3 class="isi">Form Kirim Pesan</h3>
+    <form id="contactForm">
+      <label for="namaKontak">Nama</label>
+      <input type="text" id="namaKontak" name="namaKontak" placeholder="Masukkan nama Anda" required />
+
+      <label for="emailKontak">Email</label>
+      <input type="email" id="emailKontak" name="emailKontak" placeholder="Masukkan email Anda" required />
+
+      <label for="pesan">Pesan</label>
+      <textarea id="pesan" name="pesan" rows="5" placeholder="Tulis pesan Anda di sini..." required></textarea>
+
+      <button type="submit">Kirim Pesan</button>
+    </form>
+  </section>
+
+  <footer>&copy; 2025 Jual Tiket Wisata. Semua hak cipta dilindungi.</footer>
+
+  <script>
+    document.getElementById("contactForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+      alert("Terima kasih, pesan Anda telah terkirim!");
+      this.reset();
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Destinasi Wisata</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Sevillana&display=swap');
+
+.judul{
+  color: #461a1ac5;
+  font-family: 'Dancing';
+}
+.isi{
+  color: #260b0b;
+  font-family: 'Sevillana';
+}
+  </style>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="index.html">Beranda</a>
+      <a href="destinasi.html">Destinasi</a>
+      <a href="pemesanan.html">Pemesanan</a>
+      <a href="kontak.html">Kontak</a>
+    </nav>
+  </header>
+
+  <section class="container">
+    <h2 class="isi">Destinasi Wisata Favorit</h2>
+    <div class="destinasi-grid">
+
+      <!-- 1. Gunung Bromo -->
+      <div class="card">
+        <img src="https://images.pexels.com/photos/15050628/pexels-photo-15050628.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Gunung Bromo" />
+        <div class="card-body">
+          <h3 class="isi">Gunung Bromo</h3>
+          <p>Gunung berapi aktif dengan pemandangan sunrise yang spektakuler.</p>
+          <p><strong>Harga: Rp 180.000</strong></p>
+        </div>
+      </div>
+
+      <!-- 2. Pulau Komodo -->
+      <div class="card">
+        <img src="https://images.pexels.com/photos/533931/pexels-photo-533931.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Pulau Komodo" />
+        <div class="card-body">
+          <h3 class="isi">Pulau Komodo</h3>
+          <p>Habitat asli komodo, tempat petualangan dan snorkeling.</p>
+          <p><strong>Harga: Rp 350.000</strong></p>
+        </div>
+      </div>
+
+      <!-- 3. Kepulauan Derawan -->
+      <div class="card">
+        <img src="https://images.pexels.com/photos/8300148/pexels-photo-8300148.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Kepulauan Derawan" />
+        <div class="card-body">
+          <h3 class="isi">Kepulauan Derawan</h3>
+          <p>Surga bawah laut dengan pasir putih dan air jernih.</p>
+          <p><strong>Harga: Rp 300.000</strong></p>
+        </div>
+      </div>
+
+      <!-- 4. Bangka Belitung -->
+      <div class="card">
+        <img src="https://images.pexels.com/photos/1484565/pexels-photo-1484565.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Bangka Belitung" />
+        <div class="card-body">
+          <h3 class="isi">Bangka Belitung</h3>
+          <p>Pantai Parai Tenggiri yang indah di Desa Sinar Baru.</p>
+          <p><strong>Harga: Rp 210.000</strong></p>
+        </div>
+      </div>
+
+      <!-- 5. Semarang -->
+      <div class="card">
+        <img src="https://images.pexels.com/photos/17303165/pexels-photo-17303165/free-photo-of-pameran-kerangka-di-dalam-museum-sejarah-alam-universitas-oxford.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Semarang" />
+        <div class="card-body">
+          <h3 class="isi">Semarang</h3>
+          <p>Museum sejarah, budaya, dan geologi Jawa Tengah.</p>
+          <p><strong>Harga: Rp 190.000</strong></p>
+        </div>
+      </div>
+
+      <!-- 6. Banyuwangi -->
+      <div class="card">
+        <img src="https://images.pexels.com/photos/27548622/pexels-photo-27548622/free-photo-of-pemandangan-lanskap-lansekap-alam.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Banyuwangi" />
+        <div class="card-body">
+          <h3 class="isi">Banyuwangi</h3>
+          <p>Gunung Ijen terkenal dengan fenomena blue fire.</p>
+          <p><strong>Harga: Rp 230.000</strong></p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Modal Preview -->
+  <div id="imageModal" class="modal">
+    <span class="modal-close" id="modalClose">&times;</span>
+    <img class="modal-content" id="modalImage" />
+  </div>
+
+  <footer>&copy; 2025 Jual Tiket Wisata. Semua hak cipta dilindungi.</footer>
+
+  <script>
+    const modal = document.getElementById("imageModal");
+    const modalImg = document.getElementById("modalImage");
+    const closeBtn = document.getElementById("modalClose");
+
+    document.querySelectorAll("img").forEach((img) => {
+      img.addEventListener("click", () => {
+        modal.style.display = "block";
+        modalImg.src = img.src;
+      });
+    });
+
+    closeBtn.onclick = () => modal.style.display = "none";
+    window.onclick = (e) => {
+      if (e.target === modal) modal.style.display = "none";
+    };
+  </script>
+</body>
+</html>
